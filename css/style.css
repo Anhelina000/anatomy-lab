@@ -81,6 +81,14 @@ button, a {
     gap: 30px;
 }
 
+.in-development {
+    color: #1a696d;
+    font-size: 11px;
+    font-weight: normal;
+    margin-right: 30px;
+    order: 1;
+}
+
 .nav-links a,
 .profile {
     color: var(--muted);
