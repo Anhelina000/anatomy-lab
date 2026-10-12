@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Реєстрація | Anatomy Lab</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✳</span>
+            Anatomy<span>Lab</span>
+        </a>
+
+        <a href="index.html" class="back-link">← На головну</a>
+    </header>
+
+    <main class="register-container">
+        <section class="register-card">
+            <div class="register-icon">🧬</div>
+
+            <p class="eyebrow">ТВІЙ ШЛЯХ ПОЧИНАЄТЬСЯ ТУТ</p>
+            <h1>Створи акаунт</h1>
+            <p class="subtitle">
+                Досліджуй людське тіло, проходь уроки
+                та відкривай нові рівні.
+            </p>
+
+            <form action="#" method="post">
+                <label for="username">Твій нікнейм</label>
+                <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Наприклад, neuron_01"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="email">Електронна пошта</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="you@example.com"
+                    autocomplete="email"
+                    required
+                >
+
+                <label for="password">Пароль</label>
+                <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    placeholder="Мінімум 8 символів"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <label for="confirm-password">Підтверди пароль</label>
+                <input
+                    type="password"
+                    id="confirm-password"
+                    name="confirm-password"
+                    placeholder="Введи пароль ще раз"
+                    autocomplete="new-password"
+                    minlength="8"
+                    required
+                >
+
+                <label class="terms">
+                    <input type="checkbox" name="terms" required>
+                    <span>Я погоджуюся з умовами користування</span>
+                </label>
+
+                <button type="submit" class="register-button">
+                    Створити акаунт <span>→</span>
+                </button>
+            </form>
+
+            <p class="login-text">
+                Уже маєш акаунт?
+                <a href="login.html">Увійти</a>
+            </p>
+        </section>
+
+        <p class="footer-note">
+            ANATOMY LAB · LEARN THE HUMAN BODY
+        </p>
+    </main>
+</body>
+</html>
