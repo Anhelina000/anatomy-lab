@@ -1,0 +1,280 @@
+
+/* =====================================
+   ANATOMY LAB — BRAIN PART 2
+   ===================================== */
+
+   .part-two-progress {
+    margin-bottom: 64px;
+}
+
+.part-two-progress .progress-fill {
+    width: 50%;
+    background: linear-gradient(90deg, #25d9c4, #54f0d4);
+    box-shadow: 0 0 18px rgba(37, 217, 196, 0.3);
+}
+
+.part-two-grid {
+    margin-bottom: 76px;
+}
+
+.part-two-grid .brain-part-card {
+    position: relative;
+    overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.part-two-grid .brain-part-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -35px -55px auto;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: rgba(37, 217, 196, 0.055);
+    pointer-events: none;
+}
+
+.part-two-grid .brain-part-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(37, 217, 196, 0.65);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+}
+
+.part-two-grid .part-number {
+    color: #32ddc8;
+}
+
+.part-two-grid .part-latin {
+    display: inline-block;
+    margin-top: 14px;
+    color: #39d9c5;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+}
+
+/* Everyday examples */
+
+.example-list {
+    display: grid;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.example-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 17px 18px;
+    border: 1px solid rgba(91, 224, 207, 0.14);
+    border-radius: 14px;
+    background: rgba(24, 201, 183, 0.035);
+}
+
+.example-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    color: #48e5d0;
+    background: rgba(37, 217, 196, 0.1);
+    font-size: 1.25rem;
+}
+
+.example-item p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.example-item strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Quiz layout */
+
+.part-two-quiz {
+    margin-top: 24px;
+}
+
+.part-two-quiz .quiz-question {
+    margin-bottom: 22px;
+    padding: 22px;
+    border: 1px solid rgba(94, 222, 207, 0.15);
+    border-radius: 16px;
+    background: rgba(12, 24, 32, 0.58);
+    transition: border-color 0.2s ease;
+}
+
+.part-two-quiz .quiz-question:focus-within {
+    border-color: rgba(55, 222, 202, 0.5);
+}
+
+.part-two-quiz .quiz-question > strong {
+    display: block;
+    margin-bottom: 18px;
+    line-height: 1.6;
+}
+
+.part-two-quiz .quiz-question label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 10px;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.part-two-quiz .quiz-question label:hover {
+    border-color: rgba(55, 222, 202, 0.4);
+    background: rgba(37, 217, 196, 0.055);
+}
+
+.part-two-quiz .quiz-question input[type="radio"] {
+    flex: 0 0 auto;
+    accent-color: #32ddc8;
+}
+
+.answer-feedback {
+    margin: 12px 0 0;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.feedback-correct {
+    color: #56d6b0;
+}
+
+.feedback-wrong {
+    color: #ff8585;
+}
+
+.feedback-warning {
+    color: #f0b35a;
+}
+
+.part-two-quiz .quiz-check-button {
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.part-two-quiz .quiz-result {
+    margin-top: 26px;
+    padding: 28px;
+    border: 1px solid rgba(55, 222, 202, 0.35);
+    border-radius: 18px;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(37, 217, 196, 0.09),
+            transparent 45%
+        ),
+        rgba(12, 24, 32, 0.85);
+    animation: result-appear 0.35s ease both;
+}
+
+.part-two-quiz .quiz-result[hidden] {
+    display: none;
+}
+
+.part-two-quiz .quiz-result h3 {
+    margin: 12px 0;
+}
+
+.part-two-quiz .quiz-finish {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 22px 0;
+    padding: 18px;
+    border-radius: 12px;
+    background: rgba(37, 217, 196, 0.07);
+}
+
+.part-two-quiz .quiz-finish strong {
+    color: #42e0cb;
+    font-size: 1.8rem;
+}
+
+.part-two-quiz .quiz-finish p {
+    margin: 0;
+    opacity: 0.75;
+    font-size: 0.9rem;
+}
+
+.part-two-quiz #retry-quiz {
+    cursor: pointer;
+}
+
+.back-lesson-link {
+    display: inline-block;
+    margin: 18px 0 0 16px;
+    color: #42e0cb;
+    text-decoration: none;
+}
+
+.back-lesson-link:hover {
+    text-decoration: underline;
+}
+
+@keyframes result-appear {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+    .part-two-progress {
+        margin-bottom: 42px;
+    }
+
+    .part-two-grid {
+        margin-bottom: 48px;
+    }
+
+    .example-item {
+        gap: 12px;
+        padding: 14px;
+    }
+
+    .part-two-quiz .quiz-question {
+        padding: 16px;
+    }
+
+    .part-two-quiz .quiz-result {
+        padding: 20px;
+    }
+
+    .back-lesson-link {
+        display: block;
+        margin-left: 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .part-two-grid .brain-part-card,
+    .part-two-quiz .quiz-question label {
+        transition: none;
+    }
+
+    .part-two-quiz .quiz-result {
+        animation: none;
+    }
+}
